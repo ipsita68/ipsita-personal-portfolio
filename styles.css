@@ -1,4 +1,4 @@
-
+/* Your existing CSS code */
 /* Reset CSS */
 * {
     margin: 0;
@@ -50,15 +50,6 @@
     align-items: center;
   }
   
-  .profile-picture {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-  
-  .profile-picture.fade-in {
-    opacity: 1;
-  }
-  
   .profile-details p {
     margin: 0;
   }
@@ -93,48 +84,58 @@
     color: #fff;
     text-align: center;
     padding: 20px;
-  }/* Media queries for responsiveness */
+  }
+/* Media queries for responsiveness */
 @media only screen and (max-width: 768px) {
-  /* Adjustments for smaller screens */
-  .container {
-    padding: 0; /* Remove padding */
+    /* Adjustments for smaller screens */
+    .container {
+      max-width: 100%; /* Adjust as needed */
+      padding: 10px;
+    }
+  
+    header {
+      padding: 10px 0;
+    }
+  
+    .profile-info {
+      flex-direction: column;
+      align-items: center; /* Center profile info */
+      vertical-align:middle;
+    }
+  
+    nav ul {
+      text-align: center; /* Center the navigation links */
+    }
+  
+    nav ul li {
+      display: inline; /* Set list items back to inline */
+      margin-right: 10px; /* Add some spacing between list items */
+    }
+  
+    .profile-details {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center profile details */
+      vertical-align:middle;
+    }
+  
+    .profile-picture {
+      width: 200px; /* Adjust the width of the image */
+      height: auto;
+      margin-bottom: 20px; /* Add spacing between profile picture and contact info */
+      text-align: center; /* Center profile picture (if needed) */
+      vertical-align: auto;
+    }
+  
+    .profile-picture img {
+      width: 100%; /* Make profile pictures fill container width */
+      height: auto;
+      vertical-align:baseline;
+    }
+  
+    .contact-info {
+      text-align: center; /* Center contact information */
+    }
   }
-
-  header {
-    padding: 10px 0;
-  }
-
-  .profile-info {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul {
-    text-align: center; /* Center the navigation links */
-  }
-
-  nav ul li {
-    display: inline; /* Set list items back to inline */
-    margin-right: 10px; /* Add some spacing between list items */
-  }
-
-  .profile-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center profile details */
-    text-align: center; /* Center text within profile details */
-  }
-
-  .profile-picture {
-    margin: 0; /* Remove margin */
-    margin-bottom: 20px; /* Add spacing between profile picture and contact info */
-  }
-
-  .profile-picture img {
-    width: 100%; /* Make profile pictures fill container width */
-  }
-
-  .contact-info {
-    text-align: center; /* Center contact information */
-  }
-}
+  
+  
