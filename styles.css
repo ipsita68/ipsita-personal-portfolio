@@ -1,98 +1,159 @@
+/* Your existing CSS code */
 /* Reset CSS */
 * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
+  
   @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
+    from {
+      opacity: 0;
     }
-    
-    #Intro {
-      animation: fadeIn 3s ease-in-out forwards;
+    to {
+      opacity: 1;
     }
-    
-          
+  }
+  
+  #Intro {
+    animation: fadeIn 3s ease-in-out forwards;
+  }
+  
   /* Global Styles */
   body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
   }
   
   .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 20px;
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
   }
   
   header {
-      background: black;
-      color: #fff;
-      padding: 20px 0;
-      align-content: end;
+    background: black;
+    color: #fff;
+    padding: 20px 0;
+    align-content: end;
   }
   
   .profile-info {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   
   .profile-details {
-      display: flex;
-      align-items: center;
-
+    display: flex;
+    align-items: center;
   }
   
   .profile-picture {
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-    
-    .profile-picture.fade-in {
-      opacity: 1;
-    }
-    
-  .profile-details p {
-      margin: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
   }
   
-
+  .profile-picture.fade-in {
+    opacity: 1;
+  }
+  
+  .profile-details p {
+    margin: 0;
+  }
+  
   .profile-picture img {
-      width: 200px; /* Adjust the size as needed */
-      height: auto;
-      margin-right: 20px;
+    width: 200px; /* Adjust the size as needed */
+    height: auto;
+    margin-right: 30px;
   }
   
   nav ul {
-      list-style-type: none;
-      font-family: Georgia, 'Times New Roman', Times, serif;
+    list-style-type: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   
   nav ul li {
-      display: inline;
-      margin-right: 20px;
+    display: inline;
+    margin-right: 20px;
   }
   
   nav ul li a {
-      color: #fff;
-      text-decoration: none;
+    color: #fff;
+    text-decoration: none;
   }
   
   .container section {
-      margin: 20px 0;
+    margin: 20px 0;
   }
   
   footer {
-      background: #333;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Responsive Styles */
+  @media only screen and (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    /* Adjust header layout for smaller screens */
+    header {
+      padding: 10px 0;
+    }
+  
+    /* Adjust profile details layout for smaller screens */
+    .profile-details {
+      padding: 10px;
+    }
+  }
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    .container {
+      max-width: 100%; /* Adjust as needed */
+      padding: 10px;
+    }
+  
+    header {
+      padding: 10px 0;
+    }
+  
+    .profile-info {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav ul {
+      text-align: center; /* Center the navigation links */
+    }
+  
+    nav ul li {
+      display: inline; /* Set list items back to inline */
+      margin-right: 10px; /* Add some spacing between list items */
+    }
+  
+    .profile-details {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .profile-picture {
+      margin-right: 0; /* Remove margin for profile pictures */
+      margin-bottom: 20px; /* Add spacing between profile pictures and contact info */
+      text-align: center; /* Center profile pictures */
+    }
+  
+    .profile-picture img {
+      width: 100%; /* Make profile pictures fill container width */
+    }
+  
+    .contact-info {
+      text-align: center; /* Center contact information */
+    }
   }
   
