@@ -1,9 +1,103 @@
-/* Media queries for responsiveness */
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  #Intro {
+    animation: fadeIn 3s ease-in-out forwards;
+  }
+  
+  /* Global Styles */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  header {
+    background: black;
+    color: #fff;
+    padding: 20px 0;
+    align-content: end;
+  }
+  
+  .profile-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .profile-details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-picture {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .profile-picture.fade-in {
+    opacity: 1;
+  }
+  
+  .profile-details p {
+    margin: 0;
+  }
+  
+  .profile-picture img {
+    width: 200px; /* Adjust the size as needed */
+    height: auto;
+    margin-right: 30px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .container section {
+    margin: 20px 0;
+  }
+  
+  footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }/* Media queries for responsiveness */
 @media only screen and (max-width: 768px) {
   /* Adjustments for smaller screens */
   .container {
-    max-width: 100%; /* Adjust as needed */
-    padding: 10px;
+    padding: 0; /* Remove padding */
   }
 
   header {
@@ -25,14 +119,15 @@
   }
 
   .profile-details {
+    display: flex;
     flex-direction: column;
     align-items: center; /* Center profile details */
+    text-align: center; /* Center text within profile details */
   }
 
   .profile-picture {
-    margin: 0 auto; /* Center the profile picture */
+    margin: 0; /* Remove margin */
     margin-bottom: 20px; /* Add spacing between profile picture and contact info */
-    text-align: center; /* Center profile picture (if needed) */
   }
 
   .profile-picture img {
